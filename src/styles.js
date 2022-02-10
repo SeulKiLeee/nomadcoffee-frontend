@@ -3,19 +3,29 @@ import reset from "styled-reset";
 
 
 export const lightTheme = {
-    accent: "#0095f6",
+    primary: "#F2F2F2",
+    subColor: "#F2D541",
+    mediumColor: "#6B7FF2",
+    subAccent: "#7E8FF2",
+    accent: "#D9A7D5",
     borderColor: "#dbdbdb",
-    bgColor: "#FAFAFA",
+    bgColor: "#F2F2F2",
     fontColor: "rgb(38, 38, 38)",
     boxColor: "#ffffff",
+    headerBg:"#7E8FF2"
   };
   
 export const darkTheme = {
-    accent: "#2c2c2c",
-    fontColor: "#EFECEA",
+    primary: "#0D0D0D",
+    subColor: "#593528",
+    mediumColor: "#8C6046",
+    subAccent: "#BF9B7A",
+    accent: "#F2F2EB",
+    fontColor: "#F2F2EB",
     borderColor: "#eeeeee",
-    bgColor: "#2c2c2c",
+    bgColor: "#0D0D0D",
     boxColor: "#5E6162",
+    headerBg:"#BF9B7A"
   };
 
 export const GlobalStyles = createGlobalStyle`
