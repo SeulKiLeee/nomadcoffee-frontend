@@ -7,7 +7,7 @@ import { darkModeVar, disableDarkMode, enableDarkMode } from "../../apollo";
 const FooterS = styled.footer`
  padding-top: 30px;
  background-color: ${props => props.theme.bgColor};
- border-top: 1px solid ${props => props.theme.accent};
+ border-top: 1px solid ${props => props.theme.subAccent};
  height: 80px;
  position: fixed;
  bottom:0;
@@ -21,9 +21,14 @@ const DarkModeSWitch = styled.div`
 
 const DarkModeButton = styled.span`
  cursor: pointer;
- font-size: 20px;
  font-weignt:bold;
- color: ${props => props.theme.accent};
+ color: ${props => props.theme.subAccent};
+ font-family: 'LeferiPoint-WhiteObliqueA';
+ font-size: 1.15em;
+ line-height: 1.15em;
+ span{
+     margin-left: 10px;
+ }
 `;
 
 
@@ -34,6 +39,7 @@ function Footer(){
         <DarkModeSWitch>
             <DarkModeButton onClick={darkMode ? disableDarkMode : enableDarkMode}>
                 <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+                <span>{darkMode ? "Sun rise" : "Night falls"}</span>
             </DarkModeButton>
         </DarkModeSWitch>
     </FooterS>

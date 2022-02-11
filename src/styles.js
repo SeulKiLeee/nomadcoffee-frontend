@@ -4,38 +4,42 @@ import reset from "styled-reset";
 
 export const lightTheme = {
     primary: "#F2F2F2",
-    subColor: "#F2D541",
-    mediumColor: "#6B7FF2",
-    subAccent: "#7E8FF2",
-    accent: "#D9A7D5",
+    subColor: "#BFBFBD",
+    mediumColor: "#595451",
+    subAccent: "#403A2F",
+    accent: "#0D0D0D",
     borderColor: "#dbdbdb",
     bgColor: "#F2F2F2",
-    fontColor: "rgb(38, 38, 38)",
     boxColor: "#ffffff",
-    headerBg:"#7E8FF2"
+    headerBg: "rgb(249, 249, 249)",
   };
   
 export const darkTheme = {
     primary: "#0D0D0D",
-    subColor: "#593528",
-    mediumColor: "#8C6046",
-    subAccent: "#BF9B7A",
-    accent: "#F2F2EB",
-    fontColor: "#F2F2EB",
+    subColor: "#403A2F",
+    mediumColor: "#595451",
+    subAccent: "#BFBFBD",
+    accent: "#F2F2F2",
     borderColor: "#eeeeee",
     bgColor: "#0D0D0D",
     boxColor: "#5E6162",
-    headerBg:"#BF9B7A"
+    headerBg:"#0D0D0D"
   };
 
 export const GlobalStyles = createGlobalStyle`
   ${reset}
   @font-face {
-    font-family: 'LeferiPoint-WhiteA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
+@font-face {
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
   input {
     all: unset;
   }
@@ -45,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
       background-color: ${props => props.theme.bgColor};
       font-size: 14px;
-      font-family: 'LeferiPoint-WhiteObliqueA';
+      font-family: 'GmarketSansLight';
       color: ${props => props.theme.color};
   }
   a{

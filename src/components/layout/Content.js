@@ -7,7 +7,7 @@ import { darkModeVar, disableDarkMode, enableDarkMode } from "../../apollo";
 const ContentS = styled.div`
  margin-top: 20px;
  width: 100%;
- max-width: 1600px;
+ max-width: 1200px;
  margin: 0 auto;
  min-height: 50vh;
  background-color: ${props => props.theme.bgColor};
