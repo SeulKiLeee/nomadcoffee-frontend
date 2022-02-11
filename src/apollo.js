@@ -28,9 +28,14 @@ export const disableDarkMode = () => {
     darkModeVar(false);
 };
 
+// export const client = new ApolloClient({
+//     uri: process.env.NODE_ENV === "production" 
+//             ? "https://nomad-coffee-backend-sexy.herokuapp.com/graphql" 
+//             : "http://localhost:4000/graphql",
+//     cache: new InMemoryCache(),
+// });
+
 export const client = new ApolloClient({
-    uri: process.env.NODE_ENV === "production" 
-            ? "https://nomad-coffee-backend-sexy.herokuapp.com/graphql" 
-            : "http://localhost:4000/graphql",
+    uri:"http://localhost:4000/graphql",
     cache: new InMemoryCache(),
 });
