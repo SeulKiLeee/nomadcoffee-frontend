@@ -18,7 +18,7 @@ function BottomBox({ cta, link, linkText}){
     return (
         <BottomBoxS>
             <span>{cta}</span>
-            <Link to={link}>{linkText}</Link>
+            <Link to={link} className="mediumFont">{linkText}</Link>
         </BottomBoxS>
     )
 }

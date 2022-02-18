@@ -8,5 +8,6 @@ border: 1px solid ${props => props.theme.borderColor};
 
 export const FatLink = styled.span`
 font-weight: 600;
-color: rgb(142, 142, 142);
+color: ${props => props.theme.color};
+line-height: 1.2em;
 `;

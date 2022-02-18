@@ -8,6 +8,9 @@ export const lightTheme = {
     mediumColor: "#595451",
     subAccent: "#403A2F",
     accent: "#0D0D0D",
+    buttonColor: "#ffffff",
+    buttonBg:"#0D0D0D",
+    color: "#0D0D0D",
     borderColor: "#dbdbdb",
     bgColor: "#F2F2F2",
     boxColor: "#ffffff",
@@ -20,6 +23,9 @@ export const darkTheme = {
     mediumColor: "#595451",
     subAccent: "#BFBFBD",
     accent: "#F2F2F2",
+    buttonColor: "#ffffff",
+    buttonBg:"#0D0D0D",
+    color: "#FFFFFF",
     borderColor: "#eeeeee",
     bgColor: "#0D0D0D",
     boxColor: "#5E6162",
@@ -28,11 +34,23 @@ export const darkTheme = {
 
 export const GlobalStyles = createGlobalStyle`
   ${reset}
-  @font-face {
+@font-face {
     font-family: 'GmarketSansLight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'LeferiPoint-WhiteObliqueA';
@@ -54,5 +72,15 @@ export const GlobalStyles = createGlobalStyle`
   }
   a{
     text-decoration: none;
+  }
+  .bold {
+    font-family: 'GmarketSansBold';
+  }
+  .mediumFont {
+    font-family: 'GmarketSansMedium';
+  }
+  .button {
+    background-color:${props => props.theme.buttonBg};
+    color:${props => props.theme.buttonColor};
   }
 `;

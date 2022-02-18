@@ -11,8 +11,8 @@ import BottomBox from "../components/auth/BottomBox";
 import { useForm } from "react-hook-form";
 import FormError from "../components/auth/FormError";
 import PageTitle from "../components/PageTitle";
-import { gql, useMutation } from "@apollo/client";
-import { logUserIn } from "../apollo";
+import { gql, useMutation, useReactiveVar } from "@apollo/client";
+import { darkModeVar, logUserIn } from "../apollo";
 import { useLocation } from "react-router-dom";
 
     const FacebookLogin = styled.div`
@@ -41,7 +41,7 @@ import { useLocation } from "react-router-dom";
 
 
 const Login = () => {
-    
+    const darkMode = useReactiveVar(darkModeVar);
     const location = useLocation();
     const { 
         register, 
@@ -94,7 +94,7 @@ const Login = () => {
         <AuthLayout>
             <PageTitle title="Log in" />
                 <FormBox>
-                    <FontAwesomeIcon icon={faInstagram} size="3x" />
+                    <FontAwesomeIcon icon={faInstagram} size="3x" style={ darkMode ? {color: '#fff'} : {color: '#000'} } />
                     <Notification>{location?.state?.message || ""}</Notification>
                     <form onSubmit={handleSubmit(onSubmitValid)}>
                         <Input
@@ -126,6 +126,7 @@ const Login = () => {
                         />
                         <FormError message={errors?.password?.message} />
                         <Button 
+                            className="button"
                             type="submit" 
                             value={loading ? "Loading..." : "Login"} 
                             disabled={!formState.isValid || loading} />
@@ -134,7 +135,7 @@ const Login = () => {
                     <Separator />
                     <FacebookLogin>
                         <FontAwesomeIcon icon={faFacebook} size="1x" />
-                        <span>Log in with Facebook</span>
+                        <span className="mediumFont">Log in with Facebook</span>
                     </FacebookLogin>
                 </FormBox>
                 <BottomBox 

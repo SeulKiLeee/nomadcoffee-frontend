@@ -90,7 +90,12 @@ const SignUp = () => {
                 <HeaderContainer>
                     <FontAwesomeIcon icon={faInstagram} size="3x" />
                     <Subtitle>친구들의 사진과 동영상을 보려면 가입하세요.</Subtitle>
-                    <Button type="button" onClick={() => {}} value="Log in With Facebook" />
+                    <Button 
+                        type="button" 
+                        onClick={() => {}} 
+                        value="Log in With Facebook"
+                        className="button"
+                    />
                     <Separator />
                 </HeaderContainer>
                 <form onSubmit={handleSubmit(onSubmitValid)}>
@@ -130,8 +135,11 @@ const SignUp = () => {
                         }
                     })} type="password" placeholder="Password" />
                     <FormError message={errors?.password?.message} />
-                    <Button type="submit"  value={loading ? "Loading..." : "Sign up"} 
-                            disabled={!formState.isValid || loading} />
+                    <Button 
+                        className="button"
+                        type="submit"  
+                        value={loading ? "Loading..." : "Sign up"} 
+                        disabled={!formState.isValid || loading} />
                 </form>
             </FormBox>
             <BottomBox

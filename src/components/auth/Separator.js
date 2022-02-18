@@ -16,7 +16,7 @@ span{
     margin: 0px 10px;
     font-weignt: 600;
     font-size: 12px;
-    color: #8e8e8e;
+    color: ${props => props.theme.color};
 }
 `;
 
@@ -24,7 +24,7 @@ function Separator(){
     return (
         <SeparatorS>
             <div></div>
-            <span>Or</span>
+            <span className="mediumFont">Or</span>
             <div></div>
         </SeparatorS>
     )
